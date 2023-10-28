@@ -198,8 +198,6 @@ function track(event) {
     return;
   }
 
-  console.log(trackingId.value);
-
   if (product[trackingId.value]) {
     productId.innerHTML = product[trackingId.value].id;
     productName.innerHTML = product[trackingId.value].name;
