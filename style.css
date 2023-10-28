@@ -1,0 +1,424 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  min-height: 100vh;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h2,
+h3,
+a {
+  color: #34495e;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.45em;
+}
+
+.main-nav {
+  margin-top: 5px;
+}
+
+.logo a,
+.main-nav a {
+  padding: 10px 15px;
+  text-transform: uppercase;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo a {
+  color: #fff;
+  font-weight: 800;
+}
+
+.main-nav a {
+  color: #fff;
+  font-size: 0.99em;
+  font-weight: 700;
+}
+
+.main-nav a:hover {
+  color: #4f9dd5;
+  text-decoration: underline;
+  transition: 0.5s;
+  transform: translateY(-20%);
+}
+
+.header {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  padding: 0.3em 0;
+  background-color: #001524;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+@media (min-width: 769px) {
+  .header,
+  .main-nav {
+    display: flex;
+  }
+}
+
+@media (min-width: 1025px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.tracking-heading {
+  color: #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  max-width: 400px;
+}
+
+.tracking-page {
+  height: 100vh;
+  padding: 250px 250px;
+
+  /* background-color: #001524; */
+  background: linear-gradient(to bottom, #001524, #000000, #1c1b22);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.tracking-right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tracking-subtitle {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.tracking-input {
+  width: 460px;
+  background: transparent;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+}
+
+.tracking-input:hover {
+  transform: translateY(-20%);
+  transition: 0.5s;
+}
+
+.tracking-button {
+  background: linear-gradient(to right, #2c3e50, #273746, #192227);
+  margin: 0 auto;
+  padding: 12px 24px;
+  background-color: #3498db; /* Button background color */
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.tracking-button:hover {
+  background-color: #2980b9; /* Darker color on hover */
+}
+
+.about-heading {
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 3em;
+}
+
+.about-subheading {
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  max-width: 600px;
+}
+/* Start Color: #3494E6 (a shade of blue)
+End Color: #EC6EAD (a shade of purple) */
+.about-us {
+  /* background: linear-gradient(to bottom, #3494e6, #ec6ead); */
+  background: linear-gradient(to bottom, #192f45, #000000);
+
+  text-align: center;
+  padding: 5rem;
+  /* background-color: blue; */
+  height: 100vh;
+}
+
+.contact-us {
+  color: white;
+  padding: 150px 0 100px 100px;
+  background: linear-gradient(to bottom, #1b444c, #000000);
+}
+
+.skills {
+  font-size: 1rem;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 100px;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+/* .btn__submit:hover {
+} */
+
+.form-details,
+.btn__submit:hover {
+  cursor: pointer;
+}
+
+/* Center the form */
+.form-details {
+  background-color: rgba(
+    27,
+    68,
+    76,
+    0.7
+  ); /* Semi-transparent background color */
+  margin: 20px auto;
+  text-align: center;
+  width: 100%; /* Full width */
+  max-width: 400px; /* Set a maximum width */
+  padding: 20px;
+  border-radius: 5px; /* Smaller border radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+/* Style the form elements, e.g., input fields and buttons */
+.form-details input,
+.form-details button,
+.form-details textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc; /* Add a border */
+  border-radius: 5px;
+}
+
+/* Style the submit button */
+.form-details button {
+  background-color: #0078a6; /* Use a contrasting color */
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Change the button color on hover */
+.form-details button:hover {
+  background-color: #005b8a;
+}
+
+/* Add padding to textarea */
+.form-details textarea {
+  padding: 10px;
+  resize: vertical;
+}
+
+/* Style the input and textarea on focus for better user feedback */
+.form-details input:focus,
+.form-details textarea:focus {
+  border-color: #0bb1e0;
+}
+.form-details input,
+.form-details textarea {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Semi-transparent white background */
+}
+/* Center text in button */
+.form-details button {
+  text-align: center;
+}
+
+/* Center text in input fields and textarea */
+.form-details input,
+.form-details textarea {
+  text-align: left; /* Change text alignment to left for input fields and textarea */
+}
+
+.container {
+  position: absolute;
+  left: 40%;
+  top: 10%;
+  width: 80%;
+  width: 360px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.trackingPage,
+.detail {
+  margin: auto;
+  text-align: center;
+  margin-top: 15%;
+  padding: 60px;
+  width: fit-content;
+  border-radius: 30px;
+  background-color: rgba(11, 177, 224, 0.82);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.product-detail {
+  text-align: left;
+  color: rgb(163, 0, 0);
+}
+
+.product-detail h4 {
+  margin-left: 50px;
+}
+
+.hidden {
+  display: none;
+}
+
+.tabs {
+  background-color: rgba(130, 140, 142, 0.82);
+  text-align: center;
+}
+
+.tabs:hover,
+p {
+  cursor: pointer;
+}
+
+#lt {
+  background-color: rgb(12, 132, 189);
+}
+
+#cont {
+  width: 100%;
+
+  border: 2px solid #ffffff;
+}
+
+input {
+  display: block;
+  margin: 20px 13px;
+  padding: 10px;
+  font-size: 1.3em;
+  outline: 2px solid #dfdfdf;
+  border-radius: 15px;
+}
+
+.chbk {
+  margin-left: 60px;
+  display: inline;
+}
+
+#clear {
+  clear: both;
+}
+
+.comm {
+  margin: 0 auto;
+  background-color: rgba(11, 177, 224, 0.82);
+  padding: 30px;
+  border-radius: 15px;
+  position: absolute;
+  visibility: hidden;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+#login {
+  visibility: visible;
+}
+
+h3 {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px 15px;
+  font-size: 1.5em;
+  color: #ffffff;
+}
+
+#forgot h3 {
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+}
+
+#forgot div {
+  margin-top: 30px;
+}
+
+p {
+  padding: 10px 15px;
+  font-size: 1.3em;
+  color: #ffffff;
+}
+
+.tracking-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  padding: 15px;
+  width: 272px;
+  font-size: 1.3em;
+  color: #ffffff;
+  background-color: #0b8bde;
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  cursor: pointer;
+}
+.btn__remove-login {
+  float: right;
+  background-color: transparent;
+  border: none;
+  color: #ff0000; /* Set the color to your desired cut symbol color */
+  font-size: 24px; /* Adjust the font size as needed */
+  cursor: pointer;
+  padding: 0;
+}
