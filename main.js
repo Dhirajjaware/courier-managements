@@ -1,4 +1,3 @@
-const db = openDatabase("mydb", "1.0", "Courier Management", 2 * 1024 * 1024);
 const btnLogin = document.querySelector(".btnLogin");
 const trackingPage = document.querySelector(".tracking-page");
 const inputTrack = document.querySelector(".tracking-input");
@@ -14,7 +13,7 @@ const loginTab = document.getElementById("lt");
 const regTab = document.getElementById("rt");
 let currentUser = "";
 
-let product = {
+const product = {
   123456: {
     id: "123432456",
     name: "iPhone 12",
@@ -102,30 +101,29 @@ function registerWithDB() {
     alert("Password don't match retype your Password.");
     return;
   } else {
-    db.transaction(function (tx) {
-      tx.executeSql(
-        "CREATE TABLE IF NOT EXISTS RegistgeredUsers (id unique, pwd)"
-      );
-      tx.executeSql(
-        "SELECT * FROM RegistgeredUsers WHERE id = ?",
-        [email],
-        function (tx, result) {
-          if (result.rows.length > 0) {
-            alert("Email already registered.");
-            return;
-          } else {
-            tx.executeSql(
-              `INSERT INTO RegistgeredUsers (id, pwd) VALUES ('${email}', '${password}')`
-            );
-
-            alert("Account Created Sucessfully , Now Please try logging in");
-          }
-        },
-        function (tx, error) {
-          alert("Error occurred.");
-        }
-      );
-    });
+    // db.transaction(function (tx) {
+    //   tx.executeSql(
+    //     "CREATE TABLE IF NOT EXISTS RegistgeredUsers (id unique, pwd)"
+    //   );
+    //   tx.executeSql(
+    //     "SELECT * FROM RegistgeredUsers WHERE id = ?",
+    //     [email],
+    //     function (tx, result) {
+    //       if (result.rows.length > 0) {
+    //         alert("Email already registered.");
+    //         return;
+    //       } else {
+    //         tx.executeSql(
+    //           `INSERT INTO RegistgeredUsers (id, pwd) VALUES ('${email}', '${password}')`
+    //         );
+    //         alert("Account Created Sucessfully , Now Please try logging in");
+    //       }
+    //     },
+    //     function (tx, error) {
+    //       alert("Error occurred.");
+    //     }
+    //   );
+    // });
   }
 }
 
@@ -179,10 +177,10 @@ function forgot() {
 function track(event) {
   event.preventDefault();
 
-  if (!checkLogin()) {
-    alert("Please Login First");
-    return;
-  }
+  // if (!checkLogin()) {
+  //   alert("Please Login First");
+  //   return;
+  // }
 
   let trackingDetail = document.querySelector(".detail");
   trackingDetail.classList.remove("hidden");
@@ -192,11 +190,11 @@ function track(event) {
   let productName = document.querySelector("#productName");
   let productStatus = document.querySelector("#productStatus");
 
-  if (!product[trackingId.value]) {
-    document.querySelector(".product-detail").innerHTML =
-      "<h4>No Product Found!<br>Check Your Details</h4>";
-    return;
-  }
+  // if (!product[trackingId.value]) {
+  //   document.querySelector(".product-detail").innerHTML =
+  //     "<h4>No Product Found!<br>Check Your Details</h4>";
+  //   return;
+  // }
 
   if (product[trackingId.value]) {
     productId.innerHTML = product[trackingId.value].id;
